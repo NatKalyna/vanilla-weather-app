@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
@@ -18,22 +18,25 @@
       <div class="weather-conditions">
         <div class="row">
           <div class="col-4">
-            <ul>
+            <ul class="components-of-weather">
               <li>Precipitation: 11%</li>
               <li>Humidity: 75%</li>
               <li>Wind: 11 km/h</li>
             </ul>
           </div>
           <div class="col-4">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="Partly cloudy"
-            />
-            <h2>24 ℃ | ℉</h2>
+            <div class="main-weather">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Partly cloudy"
+              />
+              <h2>
+                <span class="temperature-number">24</span> ℃ |<a href="#"> ℉</a>
+              </h2>
+            </div>
           </div>
-
           <div class="col-4">
-            <h4>Poltava</h4>
+            <h4>Poltava, Ukraine</h4>
             <h5>Friday 10:00</h5>
             <h5>Partly cloudy</h5>
           </div>
@@ -41,7 +44,7 @@
         <div class="weather-forecast">
           <div class="row">
             <div class="col-2">
-              <ul>
+              <ul class="weather-day">
                 <li>Saturday</li>
                 <li>
                   <img
@@ -53,7 +56,7 @@
               </ul>
             </div>
             <div class="col-2">
-              <ul>
+              <ul class="weather-day">
                 <li>Sunday</li>
                 <li>
                   <img
@@ -65,7 +68,7 @@
               </ul>
             </div>
             <div class="col-2">
-              <ul>
+              <ul class="weather-day">
                 <li>Monday</li>
                 <li>
                   <img
@@ -77,7 +80,7 @@
               </ul>
             </div>
             <div class="col-2">
-              <ul>
+              <ul class="weather-day">
                 <li>Tuesday</li>
                 <li>
                   <img
@@ -89,7 +92,7 @@
               </ul>
             </div>
             <div class="col-2">
-              <ul>
+              <ul class="weather-day">
                 <li>Wednesday</li>
                 <li>
                   <img
@@ -101,7 +104,7 @@
               </ul>
             </div>
             <div class="col-2">
-              <ul>
+              <ul class="weather-day">
                 <li>Thursday</li>
                 <li>
                   <img
@@ -114,15 +117,15 @@
             </div>
           </div>
         </div>
-        <div class="footer">
-          <a
-            href="https://github.com/NatKalyna/vanilla-weather-app"
-            rel="noopener"
-            target="_blank"
-            >Open-source code</a
-          >
-          by Natalia Kalenska 💙💛
-        </div>
+      </div>
+      <div class="footer">
+        <a
+          href="https://github.com/NatKalyna/vanilla-weather-app"
+          rel="noopener"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Natalia Kalenska 💙💛
       </div>
     </div>
     <script src="src/app.js"></script>

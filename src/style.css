@@ -1,0 +1,90 @@
+body {
+  font-family: arial, sans-serif;
+}
+
+h2 {
+  color: rgb(32, 33, 36);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 300;
+  padding-top: 4px;
+  padding-left: 10px;
+  vertical-align: top;
+}
+
+h4 {
+  color: rgb(32, 33, 36);
+  font-family: "Google Sans", arial, sans-serif;
+  font-size: 22px;
+  text-align: right;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0px;
+}
+
+h5 {
+  color: rgb(112, 117, 122);
+  font-size: 16px;
+  font-weight: 400;
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.weather-conditions {
+  max-width: 700px;
+  margin: 0px auto;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+}
+
+.components-of-weather {
+  color: rgb(112, 117, 122);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  padding-left: 9px;
+  padding-top: 6px;
+}
+
+.temperature-number {
+  color: rgb(32, 33, 36);
+  font-family: "Google Sans", arial, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 60px;
+  vertical-align: top;
+}
+
+.weather-forecast {
+  padding-top: 20px;
+  padding-right: 15px;
+}
+
+.weather-day {
+  padding-left: 15px;
+  text-align: center;
+}
+
+.footer {
+  font-size: 14px;
+  max-width: 700px;
+  margin: 0px auto;
+}
