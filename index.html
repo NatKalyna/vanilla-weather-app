@@ -10,35 +10,42 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-conditions">
-        <div class="row">
-          <div class="col-4">
-            <ul class="components-of-weather">
-              <li>Precipitation: 11%</li>
-              <li>Humidity: 75%</li>
-              <li>Wind: 11 km/h</li>
-            </ul>
-          </div>
-          <div class="col-4">
-            <div class="main-weather">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                alt="Partly cloudy"
-              />
-              <h2>
-                <span class="temperature-number">24</span> ℃ |<a href="#"> ℉</a>
-              </h2>
+        <div class="header">
+          <div class="row">
+            <div class="col-4">
+              <ul class="components-of-weather">
+                <li>Precipitation: <span id="presipitation">11</span>%</li>
+                <li>Humidity: <span id="humidity">75</span>%</li>
+                <li>Wind: <span id="wind">11</span> km/h</li>
+              </ul>
             </div>
-          </div>
-          <div class="col-4">
-            <h4>Poltava, Ukraine</h4>
-            <h5>Friday 10:00</h5>
-            <h5>Partly cloudy</h5>
+            <div class="col-4">
+              <div class="header-weather">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="Partly cloudy"
+                />
+                <h2>
+                  <span class="temperature-number">24</span> ℃ |<a href="#">
+                    ℉</a
+                  >
+                </h2>
+              </div>
+            </div>
+            <div class="col-4">
+              <h4 id="header-city">
+                Poltava, <span id="header-country">Ukraine</span>
+              </h4>
+              <h5>Friday 10:00</h5>
+              <h5 id="header-description">Partly cloudy</h5>
+            </div>
           </div>
         </div>
         <div class="weather-forecast">
