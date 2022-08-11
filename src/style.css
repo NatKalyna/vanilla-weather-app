@@ -7,7 +7,7 @@ h2 {
   display: inline-block;
   font-size: 16px;
   font-weight: 300;
-  padding-top: 4px;
+  padding-top: 13px;
   padding-left: 10px;
   vertical-align: top;
 }
@@ -88,4 +88,8 @@ a {
   font-size: 14px;
   max-width: 700px;
   margin: 0px auto;
+}
+
+#header-icon {
+  width: 85px;
 }

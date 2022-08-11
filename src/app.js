@@ -17,7 +17,7 @@ function formatDate(timestamp) {
 
   let minutes = date.getMinutes();
   if (minutes < 10) {
-    minuters = `0${minutes}`;
+    minutes = `0${minutes}`;
   }
 
   return `${day} ${hours}:${minutes}`;
@@ -26,6 +26,7 @@ function formatDate(timestamp) {
 function displayTemperature(response) {
   console.log(response.data);
   let tempElement = document.querySelector(".temperature-number");
+  let iconElement = document.querySelector("#header-icon");
   let cityElement = document.querySelector("#header-city");
   let countryElement = document.querySelector("#header-country");
   let dateElement = document.querySelector("#header-date");
@@ -34,6 +35,11 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
 
   tempElement.innerHTML = Math.round(response.data.main.temp);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   cityElement.innerHTML = response.data.name;
   countryElement.innerHTML = response.data.sys.country;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -43,6 +49,7 @@ function displayTemperature(response) {
 }
 
 let apiKey = "c00b6e3e1cc217d87916a8b794f7ca77";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Poltava,UA&appid=${apiKey}&units=metric`;
+let city = "Poltava";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
