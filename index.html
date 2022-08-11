@@ -17,6 +17,27 @@
   <body>
     <div class="container">
       <div class="weather-conditions">
+        <form class="mb-3" id="search-form">
+          <div class="row">
+            <div class="col-8">
+              <input
+                type="search"
+                placeholder="Enter your city..."
+                class="form-control"
+                id="search-input"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-primary"
+                id="search-button"
+              />
+            </div>
+          </div>
+        </form>
         <div class="header">
           <div class="row">
             <div class="col-4">
@@ -29,18 +50,14 @@
               <div class="header-weather">
                 <img src="" alt="" id="header-icon" />
                 <h2>
-                  <span class="temperature-number">24</span> ℃ |<a href="#">
-                    ℉</a
-                  >
+                  <span class="temperature-number"></span> ℃ |<a href="#"> ℉</a>
                 </h2>
               </div>
             </div>
             <div class="col-4">
-              <h4 id="header-city">
-                Poltava, <span id="header-country">Ukraine</span>
-              </h4>
-              <h5 id="header-date">Friday 10:00</h5>
-              <h5 id="header-description">Partly cloudy</h5>
+              <h4 id="header-city"></h4>
+              <h5 id="header-date"></h5>
+              <h5 id="header-description"></h5>
             </div>
           </div>
         </div>

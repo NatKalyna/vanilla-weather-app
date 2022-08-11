@@ -28,7 +28,6 @@ function displayTemperature(response) {
   let tempElement = document.querySelector(".temperature-number");
   let iconElement = document.querySelector("#header-icon");
   let cityElement = document.querySelector("#header-city");
-  let countryElement = document.querySelector("#header-country");
   let dateElement = document.querySelector("#header-date");
   let descriptionElement = document.querySelector("#header-description");
   let humidityElement = document.querySelector("#humidity");
@@ -41,15 +40,24 @@ function displayTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   cityElement.innerHTML = response.data.name;
-  countryElement.innerHTML = response.data.sys.country;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
-let apiKey = "c00b6e3e1cc217d87916a8b794f7ca77";
-let city = "Poltava";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "c00b6e3e1cc217d87916a8b794f7ca77";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
