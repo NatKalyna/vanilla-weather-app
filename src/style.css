@@ -63,6 +63,10 @@ a {
   padding-top: 6px;
 }
 
+.header-weather .active {
+  color: rgb(32, 33, 36);
+}
+
 .temperature-number {
   color: rgb(32, 33, 36);
   font-family: "Google Sans", arial, sans-serif;
@@ -91,4 +95,8 @@ a {
 
 #header-icon {
   width: 85px;
+}
+
+#farenheit-link {
+  color: rgb(112, 117, 122);
 }
