@@ -100,3 +100,7 @@ a {
 #farenheit-link {
   color: rgb(112, 117, 122);
 }
+
+#forecast-tempMin {
+  opacity: 0.7;
+}
