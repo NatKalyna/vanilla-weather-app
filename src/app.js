@@ -23,8 +23,62 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[day];
+}
+
 function displayWeatherForecast(response) {
-  console.log(response.data);
+  console.log(response.data.daily);
+
+  let forecast = response.data.daily;
+
+  let forecastElement = document.querySelector("#forecast-block");
+
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2">
+        <ul class="weather-day">
+          <li class="week-day">${formatDay(forecastDay.dt)}</li>
+          <li>
+            <img
+              src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png"
+              alt="thunderstorms in places"
+              id="day-icon-forecast"
+            />
+          </li>
+          <li class="forecast-temperature">
+            <span id="forecast-tempDay">${Math.round(
+              forecastDay.temp.day
+            )}°</span>
+            <span id="forecast-tempNight">${Math.round(
+              forecastDay.temp.night
+            )}°</span>
+          </li>
+        </ul>
+      </div>
+    `;
+    }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinates) {

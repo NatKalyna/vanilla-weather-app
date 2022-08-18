@@ -78,13 +78,17 @@ a {
 }
 
 .weather-forecast {
-  padding-top: 20px;
-  padding-right: 15px;
+  padding-top: 10px;
 }
 
 .weather-day {
   padding-left: 15px;
   text-align: center;
+}
+
+.week-day,
+.forecast-temperature {
+  font-size: 15px;
 }
 
 .footer {
@@ -99,6 +103,10 @@ a {
 
 #farenheit-link {
   color: rgb(112, 117, 122);
+}
+
+#day-icon-forecast {
+  width: 60px;
 }
 
 #forecast-tempNight {
